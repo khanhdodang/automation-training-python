@@ -3,6 +3,7 @@ from selenium import webdriver
 
 # create webdriver object
 driver = webdriver.Chrome()
+driver.maximize_window()
 
 # enter keyword to search
 keyword = "geeksforgeeks"

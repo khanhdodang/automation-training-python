@@ -6,7 +6,7 @@ driver.maximize_window()
 
 driver.get("https://the-internet.herokuapp.com/login")
 
-elements = driver.find_element_by_css_selector("#username")
+element = driver.find_element_by_css_selector("#username")
 elements = driver.find_elements_by_css_selector("#username")
 
 driver.close()

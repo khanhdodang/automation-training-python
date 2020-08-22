@@ -9,8 +9,8 @@ inputElement = driver.find_element_by_name("q")
 inputElement.send_keys("Techbeamers")
 inputElement.submit()
 time.sleep(3)
-elem = driver.find_element_by_partial_link_text("Python")
-elem = driver.find_elements_by_partial_link_text("Python")
+element = driver.find_element_by_partial_link_text("Python")
+elements = driver.find_elements_by_partial_link_text("Python")
 
 driver.close()
 

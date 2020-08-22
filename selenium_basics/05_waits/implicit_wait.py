@@ -1,6 +1,7 @@
 from selenium import webdriver
 
 driver = webdriver.Chrome()
+driver.maximize_window()
 driver.implicitly_wait(100)
 
 driver.get("http://google.com")
