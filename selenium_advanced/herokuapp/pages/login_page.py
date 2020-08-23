@@ -1,6 +1,5 @@
 from pages.base_page_object import BasePage
 from locators import LoginPageLocators
-from TestData import TestData
 
 class LoginPage(BasePage):
   URL = 'https://the-internet.herokuapp.com/login'
