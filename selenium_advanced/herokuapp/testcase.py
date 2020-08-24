@@ -36,6 +36,16 @@ class HerokuAppLogin(unittest.TestCase):
         
         print(result_page.get_message())
         self.assertIn("Your password is invalid!", result_page.get_message())
+    
+    @unittest.SkipTest
+    def test_login_with_invalid_username_password(self):
+        login_page = LoginPage(self.driver)
+        login_page.login(TestData.FAKE_USERNAME, TestData.FAKE_PASSWORD)
+        result_page = ResultPage(self.driver)
+        
+        print(result_page.get_message())
+        self.assertIn("Your password is invalid!", result_page.get_message())
+
 
     @classmethod
     def tearDown(self):
