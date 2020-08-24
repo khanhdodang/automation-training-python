@@ -1,5 +1,6 @@
 from pages.base_page_object import BasePage
 from locators import LoginPageLocators
+from TestData import TestData
 
 class LoginPage(BasePage):
   URL = 'https://the-internet.herokuapp.com/login'
@@ -7,7 +8,7 @@ class LoginPage(BasePage):
   def __init__(self, driver):
     super().__init__(driver)
     self.driver = driver
-    self.driver.get(self.URL)
+    self.driver.get(TestData.BASE_URL)
 
   def login(self, username, password):
     self.enter_username(username)
