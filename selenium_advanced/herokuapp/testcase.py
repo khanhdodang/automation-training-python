@@ -7,6 +7,7 @@ from TestData import TestData
 class HerokuAppLogin(unittest.TestCase):
     """A sample test class to show how page object works"""
 
+    @classmethod
     def setUp(self):
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
@@ -36,6 +37,7 @@ class HerokuAppLogin(unittest.TestCase):
         print(result_page.get_message())
         self.assertIn("Your password is invalid!", result_page.get_message())
 
+    @classmethod
     def tearDown(self):
         self.driver.close()
 
