@@ -2,15 +2,18 @@ import unittest
 from selenium import webdriver
 from pages.login_page import LoginPage
 from pages.result_page import ResultPage
+from base_test import Test_Base
 from TestData import TestData
 
-class HerokuAppLogin(unittest.TestCase):
-    """A sample test class to show how page object works"""
+browser = 'chrome'
 
-    @classmethod
+class HerokuAppLogin(Test_Base):
+    """A sample test class to show how page object works"""
     def setUp(self):
-        self.driver = webdriver.Chrome()
-        self.driver.maximize_window()
+        super().setUp()
+
+    def tearDown(self):
+         super().tearDown()
 
     def test_login_successfully(self):
         login_page = LoginPage(self.driver)
@@ -45,11 +48,6 @@ class HerokuAppLogin(unittest.TestCase):
         
         print(result_page.get_message())
         self.assertIn("Your password is invalid!", result_page.get_message())
-
-
-    @classmethod
-    def tearDown(self):
-        self.driver.close()
 
 if __name__ == "__main__":
     unittest.main()

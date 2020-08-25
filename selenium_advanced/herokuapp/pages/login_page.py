@@ -4,12 +4,10 @@ from TestData import TestData
 import logging
 
 class LoginPage(BasePage):
-  URL = 'https://the-internet.herokuapp.com/login'
 
   def __init__(self, driver):
     super().__init__(driver)
-    self.driver = driver
-    self.driver.get(TestData.BASE_URL)
+    self.navigate_to(TestData.BASE_URL)
     logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
 
   def login(self, username, password):
@@ -37,4 +35,4 @@ class LoginPage(BasePage):
   def is_title_matches(self):
     logging.info("Check the title match or not")
     """Verifies that the hardcoded text "The Internet" appears in page title"""
-    return "The Internet" in self.driver.title
+    return "The Internet" in self.get_title()
