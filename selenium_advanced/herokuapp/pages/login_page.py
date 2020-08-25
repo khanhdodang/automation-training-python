@@ -1,6 +1,7 @@
 from pages.base_page_object import BasePage
 from locators import LoginPageLocators
 from TestData import TestData
+import logging
 
 class LoginPage(BasePage):
   URL = 'https://the-internet.herokuapp.com/login'
@@ -9,6 +10,7 @@ class LoginPage(BasePage):
     super().__init__(driver)
     self.driver = driver
     self.driver.get(TestData.BASE_URL)
+    logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
 
   def login(self, username, password):
     self.enter_username(username)
@@ -16,14 +18,23 @@ class LoginPage(BasePage):
     self.click_login_button()
 
   def enter_username(self, username):
+    message = "Enter the username '{}'"
+    logging.info(message.format(username))
+
     self.enter_text(LoginPageLocators.INPUT_USERNAME, username)
 
   def enter_password(self, password):
+    message = "Enter the password '{}'"
+    logging.info(message.format(password))
+
     self.enter_text(LoginPageLocators.INPUT_PASSWORD, password)
 
   def click_login_button(self):
+    logging.info("Click Login button")
+
     self.click(LoginPageLocators.BUTTON_LOGIN)
 
   def is_title_matches(self):
+    logging.info("Check the title match or not")
     """Verifies that the hardcoded text "The Internet" appears in page title"""
     return "The Internet" in self.driver.title
