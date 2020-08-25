@@ -5,12 +5,10 @@ from pages.result_page import ResultPage
 from base_test import Test_Base
 from TestData import TestData
 
-browser = 'chrome'
-
 class HerokuAppLogin(Test_Base):
     """A sample test class to show how page object works"""
     def setUp(self):
-        super().setUp()
+        super().setUp(TestData.BROWSER)
 
     def tearDown(self):
          super().tearDown()

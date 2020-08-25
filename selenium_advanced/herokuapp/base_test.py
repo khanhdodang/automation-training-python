@@ -7,9 +7,9 @@ from TestData import TestData
 #Base Class for the tests
 class Test_Base(unittest.TestCase):
 
-    def setUp(self):
+    def setUp(self, browser):
         # Setting up how we want Chrome to run
-        self.driver = self.startBrowser('chrome')
+        self.driver = self.startBrowser(browser)
         self.driver.maximize_window()
 
     def tearDown(self):

@@ -4,3 +4,4 @@ class TestData():
     FAKE_USERNAME = "khanhdo"
     PASSWORD = "SuperSecretPassword!"
     FAKE_PASSWORD = "SuperSecretPassword"
+    BROWSER = "chrome"
