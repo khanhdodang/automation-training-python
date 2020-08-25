@@ -1,3 +1,4 @@
+import os
 import unittest
 from selenium import webdriver
 from pages.login_page import LoginPage
@@ -9,7 +10,10 @@ class HerokuAppLogin(Test_Base):
     """A sample test class to show how page object works"""
     @classmethod
     def setUp(self):
-        super().setUp(TestData.BROWSER)
+        if os.environ['BROWSER'] is not None:
+            super().setUp(os.environ['BROWSER'])
+        else:
+            super().setUp(TestData.BROWSER)
 
     @classmethod
     def tearDown(self):

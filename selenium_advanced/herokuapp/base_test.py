@@ -19,7 +19,7 @@ class Test_Base(unittest.TestCase):
         self.driver.close()
         self.driver.quit()
 
-    def startBrowser(self, name = 'chrome'):
+    def startBrowser(name = "chrome"):
         """
         browsers，"firefox"、"chrome"、"ie"、"phantomjs"
         """
