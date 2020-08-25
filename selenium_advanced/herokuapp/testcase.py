@@ -7,9 +7,11 @@ from TestData import TestData
 
 class HerokuAppLogin(Test_Base):
     """A sample test class to show how page object works"""
+    @classmethod
     def setUp(self):
         super().setUp(TestData.BROWSER)
 
+    @classmethod
     def tearDown(self):
          super().tearDown()
 
