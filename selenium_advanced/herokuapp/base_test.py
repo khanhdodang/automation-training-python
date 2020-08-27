@@ -5,7 +5,7 @@ from locators import LoginPageLocators
 from TestData import TestData
 
 #Base Class for the tests
-class Test_Base(unittest.TestCase):
+class BaseTest(unittest.TestCase):
 
     @classmethod
     def setUp(self, browser):
