@@ -1,8 +1,5 @@
 import unittest
 from selenium import webdriver
-from pages.base_page_object import BasePage
-from locators import LoginPageLocators
-from TestData import TestData
 
 #Base Class for the tests
 class BaseTest(unittest.TestCase):
@@ -26,6 +23,7 @@ class BaseTest(unittest.TestCase):
         try:
             if name == "firefox" or name == "Firefox" or name == "ff":
                 print("start browser name :Firefox")
+                //return webdriver.Firefox(executable_path='')
                 return webdriver.Firefox()
             elif name == "chrome" or name == "Chrome":
                 print("start browser name :Chrome")
