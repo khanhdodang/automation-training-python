@@ -1,5 +1,5 @@
-from pages.base_page_object import BasePage
-from locators import ResultPageLocators
+from Pages.base_page_object import BasePage
+from Locators.locators import ResultPageLocators
 import logging
 
 class ResultPage(BasePage):

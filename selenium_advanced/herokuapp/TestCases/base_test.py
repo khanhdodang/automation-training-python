@@ -1,8 +1,10 @@
 import os
+import sys
 import unittest
 from selenium import webdriver
-from TestData import TestData
+from TestData.TestData import TestData
 
+sys.path.append(".")
 #Base Class for the tests
 class BaseTest(unittest.TestCase):
 

@@ -1,6 +1,6 @@
-from pages.base_page_object import BasePage
-from locators import LoginPageLocators
-from TestData import TestData
+from Pages.base_page_object import BasePage
+from Locators.locators import LoginPageLocators
+from TestData.TestData import TestData
 import logging
 
 class LoginPage(BasePage):
