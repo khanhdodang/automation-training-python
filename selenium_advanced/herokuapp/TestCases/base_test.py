@@ -29,17 +29,17 @@ class BaseTest(unittest.TestCase):
         browsers，"firefox"、"chrome"、"ie"、"phantomjs"
         """
         try:
-            if name == "firefox" or name == "Firefox" or name == "ff":
+            if name.lower() == "firefox" or name.lower() == "ff":
                 print("start browser name :Firefox")
                 #return webdriver.Firefox(executable_path='')
                 return webdriver.Firefox()
-            elif name == "chrome" or name == "Chrome":
+            elif name.lower() == "chrome":
                 print("start browser name :Chrome")
                 return webdriver.Chrome()
-            elif name == "Edge" or name == "edge":
+            elif name.lower() == "edge":
                 print("start browser name :Edge")
                 return webdriver.MicrosoftEdge()
-            elif name == "phantomjs" or name == "Phantomjs":
+            elif name.lower() == "phantomjs":
                 print("start browser name :phantomjs")
                 return webdriver.PhantomJS()
             else:

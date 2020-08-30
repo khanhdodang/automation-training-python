@@ -31,23 +31,23 @@ class BaseTest(unittest.TestCase):
         https://www.selenium.dev/selenium/docs/api/py/webdriver/selenium.webdriver.common.desired_capabilities.html
         """
         try:
-            if name == "firefox" or name == "Firefox" or name == "ff":
+            if name.lower() == "firefox" or name.lower() == "ff":
                 print("start browser name :Firefox")
                 #return webdriver.Firefox(executable_path='')
                 return webdriver.Remote(
                     command_executor='http://127.0.0.1:4444/wd/hub',
                     desired_capabilities=DesiredCapabilities.FIREFOX)
-            elif name == "chrome" or name == "Chrome":
+            elif name.lower() == "chrome":
                 print("start browser name :Chrome")
                 return webdriver.Remote(
                     command_executor='http://127.0.0.1:4444/wd/hub',
                     desired_capabilities=DesiredCapabilities.CHROME)
-            elif name == "Edge" or name == "edge":
+            elif name.lower() == "edge":
                 print("start browser name :Edge")
                 return webdriver.Remote(
                     command_executor='http://127.0.0.1:4444/wd/hub',
                     desired_capabilities=DesiredCapabilities.EDGE)
-            elif name == "phantomjs" or name == "Phantomjs":
+            elif name.lower() == "phantomjs":
                 print("start browser name :phantomjs")
                 return webdriver.Remote(
                     command_executor='http://127.0.0.1:4444/wd/hub',
