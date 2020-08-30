@@ -23,7 +23,7 @@ class BaseTest(unittest.TestCase):
         try:
             if name == "firefox" or name == "Firefox" or name == "ff":
                 print("start browser name :Firefox")
-                //return webdriver.Firefox(executable_path='')
+                #return webdriver.Firefox(executable_path='')
                 return webdriver.Firefox()
             elif name == "chrome" or name == "Chrome":
                 print("start browser name :Chrome")
