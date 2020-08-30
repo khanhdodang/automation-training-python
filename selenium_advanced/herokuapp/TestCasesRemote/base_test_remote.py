@@ -2,6 +2,7 @@ import os
 import sys
 import unittest
 from selenium import webdriver
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from TestData.TestData import TestData
 
 sys.path.append(".")
@@ -12,7 +13,7 @@ class BaseTest(unittest.TestCase):
     def setUp(self):
         # Setting up how we want Chrome to run
         browser = self.get_browser()
-        self.driver = self.startBrowser(browser)
+        self.driver = self.startBrowserRemote(browser)
         self.driver.maximize_window()
 
     @classmethod
@@ -23,25 +24,34 @@ class BaseTest(unittest.TestCase):
             self.driver.quit()
         except Exception as e:
             pass
-
-    def startBrowser(name = "chrome"):
+        
+    def startBrowserRemote(name = "chrome"):
         """
         browsers，"firefox"、"chrome"、"ie"、"phantomjs"
+        https://www.selenium.dev/selenium/docs/api/py/webdriver/selenium.webdriver.common.desired_capabilities.html
         """
         try:
             if name == "firefox" or name == "Firefox" or name == "ff":
                 print("start browser name :Firefox")
                 #return webdriver.Firefox(executable_path='')
-                return webdriver.Firefox()
+                return webdriver.Remote(
+                    command_executor='http://127.0.0.1:4444/wd/hub',
+                    desired_capabilities=DesiredCapabilities.FIREFOX)
             elif name == "chrome" or name == "Chrome":
                 print("start browser name :Chrome")
-                return webdriver.Chrome()
+                return webdriver.Remote(
+                    command_executor='http://127.0.0.1:4444/wd/hub',
+                    desired_capabilities=DesiredCapabilities.CHROME)
             elif name == "Edge" or name == "edge":
                 print("start browser name :Edge")
-                return webdriver.MicrosoftEdge()
+                return webdriver.Remote(
+                    command_executor='http://127.0.0.1:4444/wd/hub',
+                    desired_capabilities=DesiredCapabilities.EDGE)
             elif name == "phantomjs" or name == "Phantomjs":
                 print("start browser name :phantomjs")
-                return webdriver.PhantomJS()
+                return webdriver.Remote(
+                    command_executor='http://127.0.0.1:4444/wd/hub',
+                    desired_capabilities=DesiredCapabilities.PHANTOMJS)
             else:
                 print("Not found this browser,You can use ‘firefox‘, ‘chrome‘, ‘ie‘ or ‘phantomjs‘")
         except Exception as msg:
