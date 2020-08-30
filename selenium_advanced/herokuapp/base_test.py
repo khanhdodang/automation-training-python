@@ -1,12 +1,15 @@
+import os
 import unittest
 from selenium import webdriver
+from TestData import TestData
 
 #Base Class for the tests
 class BaseTest(unittest.TestCase):
 
     @classmethod
-    def setUp(self, browser):
+    def setUp(self):
         # Setting up how we want Chrome to run
+        browser = self.get_browser()
         self.driver = self.startBrowser(browser)
         self.driver.maximize_window()
 
@@ -38,4 +41,9 @@ class BaseTest(unittest.TestCase):
                 print("Not found this browser,You can use ‘firefox‘, ‘chrome‘, ‘ie‘ or ‘phantomjs‘")
         except Exception as msg:
             print("message: %s" % str(msg))
-        
+
+    def get_browser():
+        try:
+            return os.environ['BROWSER']
+        except KeyError:
+            return TestData.BROWSER
