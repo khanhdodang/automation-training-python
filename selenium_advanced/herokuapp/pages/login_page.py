@@ -1,6 +1,7 @@
 from Pages.base_page_object import BasePage
 from Locators.locators import LoginPageLocators
 from TestData.TestData import TestData
+from Objects.Account import Account
 import logging
 
 class LoginPage(BasePage):
@@ -13,6 +14,11 @@ class LoginPage(BasePage):
   def login(self, username, password):
     self.enter_username(username)
     self.enter_password(password)
+    self.click_login_button()
+
+  def login(self, Accounts):
+    self.enter_username(Accounts.username)
+    self.enter_password(Accounts.password)
     self.click_login_button()
 
   def enter_username(self, username):
