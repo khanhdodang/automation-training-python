@@ -6,7 +6,7 @@ from Pages.login_page import LoginPage
 from Pages.result_page import ResultPage
 from TestCases.base_test import BaseTest
 from TestData.TestData import TestData
-from Objects.Account import Account
+from Objects.account import Account
 
 class HerokuAppLogin4(BaseTest):
     """A sample test class to show how page object works"""
@@ -23,7 +23,7 @@ class HerokuAppLogin4(BaseTest):
         self.assertTrue(login_page.is_title_matches())
 
         account = Account(TestData.USERNAME, TestData.PASSWORD)
-        login_page.login(account)
+        login_page.login_object(account)
         result_page = ResultPage(self.driver)
 
         print(result_page.get_message())
