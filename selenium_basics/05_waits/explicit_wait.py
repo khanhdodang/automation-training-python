@@ -7,9 +7,9 @@ driver = webdriver.Chrome()
 driver.maximize_window()
 driver.get("http://www.python.org")
 try:
-    element = WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.ID, "id-search-field"))
-    )
-    element.click()
+  element = WebDriverWait(driver, 10).until(
+    EC.element_to_be_clickable((By.ID, "id-search-field"))
+  )
+  element.click()
 finally:
-    driver.quit()
+  driver.quit()

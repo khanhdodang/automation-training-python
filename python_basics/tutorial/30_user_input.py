@@ -19,8 +19,8 @@ Python 3.6
 username = input("Enter username:")
 print("Username is: " + username)
 
-#Python 2.7
+# Python 2.7
 username = raw_input("Enter username:")
 print("Username is: " + username)
 
-#Python stops executing when it comes to the input() function, and continues when the user has given some input.
+# Python stops executing when it comes to the input() function, and continues when the user has given some input.

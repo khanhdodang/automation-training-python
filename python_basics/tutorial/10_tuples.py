@@ -122,7 +122,7 @@ You cannot add items to a tuple:
 '''
 
 thistuple = ("apple", "banana", "cherry")
-thistuple[3] = "orange" # This will raise an error
+thistuple[3] = "orange"  # This will raise an error
 print(thistuple)
 
 '''
@@ -136,7 +136,7 @@ One item tuple, remember the commma:
 thistuple = ("apple",)
 print(type(thistuple))
 
-#NOT a tuple
+# NOT a tuple
 thistuple = ("apple")
 print(type(thistuple))
 
@@ -152,7 +152,7 @@ The del keyword can delete the tuple completely:
 
 thistuple = ("apple", "banana", "cherry")
 del thistuple
-print(thistuple) #this will raise an error because the tuple no longer exists
+print(thistuple)  # this will raise an error because the tuple no longer exists
 
 '''
 Join Two Tuples
@@ -162,7 +162,7 @@ Example
 Join two tuples:
 '''
 
-tuple1 = ("a", "b" , "c")
+tuple1 = ("a", "b", "c")
 tuple2 = (1, 2, 3)
 
 tuple3 = tuple1 + tuple2
@@ -176,7 +176,7 @@ Example
 Using the tuple() method to make a tuple:
 '''
 
-thistuple = tuple(("apple", "banana", "cherry")) # note the double round-brackets
+thistuple = tuple(("apple", "banana", "cherry"))  # note the double round-brackets
 print(thistuple)
 
 '''

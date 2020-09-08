@@ -13,8 +13,10 @@ Example
 Create a class named MyClass, with a property named x:
 '''
 
+
 class MyClass:
   x = 5
+
 
 '''
 Create Object
@@ -41,10 +43,12 @@ Example
 Create a class named Person, use the __init__() function to assign values for name and age:
 '''
 
+
 class Person:
   def __init__(self, name, age):
     self.name = name
     self.age = age
+
 
 p1 = Person("John", 36)
 
@@ -64,6 +68,7 @@ Example
 Insert a function that prints a greeting, and execute it on the p1 object:
 '''
 
+
 class Person:
   def __init__(self, name, age):
     self.name = name
@@ -71,6 +76,7 @@ class Person:
 
   def myfunc(self):
     print("Hello my name is " + self.name)
+
 
 p1 = Person("John", 36)
 p1.myfunc()
@@ -87,6 +93,7 @@ Example
 Use the words mysillyobject and abc instead of self:
 '''
 
+
 class Person:
   def __init__(mysillyobject, name, age):
     mysillyobject.name = name
@@ -94,6 +101,7 @@ class Person:
 
   def myfunc(abc):
     print("Hello my name is " + abc.name)
+
 
 p1 = Person("John", 36)
 p1.myfunc()
@@ -134,5 +142,7 @@ class definitions cannot be empty, but if you for some reason have a class defin
 
 Example
 '''
+
+
 class Person:
   pass

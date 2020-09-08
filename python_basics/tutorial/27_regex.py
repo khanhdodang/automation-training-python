@@ -112,7 +112,7 @@ import re
 txt = "The rain in Spain"
 x = re.findall("Portugal", txt)
 print(x)
- 
+
 '''
 The search() Function
 The search() function searches the string for a match, and returns a Match object if there is a match.
@@ -142,7 +142,7 @@ import re
 txt = "The rain in Spain"
 x = re.search("Portugal", txt)
 print(x)
- 
+
 '''
 The split() Function
 The split() function returns a list where the string has been split at each match:
@@ -169,7 +169,7 @@ import re
 txt = "The rain in Spain"
 x = re.split("\s", txt, 1)
 print(x)
- 
+
 '''
 The sub() Function
 The sub() function replaces the matches with the text of your choice:
@@ -196,7 +196,7 @@ import re
 txt = "The rain in Spain"
 x = re.sub("\s", "9", txt, 2)
 print(x)
- 
+
 '''
 Match Object
 A Match Object is an object containing information about the search and the result.
@@ -211,7 +211,7 @@ import re
 
 txt = "The rain in Spain"
 x = re.search("ai", txt)
-print(x) #this will print an object
+print(x)  # this will print an object
 
 '''
 The Match object has properties and methods used to retrieve information about the search, and the result:
@@ -255,5 +255,4 @@ txt = "The rain in Spain"
 x = re.search(r"\bS\w+", txt)
 print(x.group())
 
-
-#Note: If there is no match, the value None will be returned, instead of the Match Object.
+# Note: If there is no match, the value None will be returned, instead of the Match Object.

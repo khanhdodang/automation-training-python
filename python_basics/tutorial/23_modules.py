@@ -12,8 +12,10 @@ Example
 Save this code in a file named mymodule.py
 '''
 
+
 def greeting(name):
   print("Hello, " + name)
+
 
 '''
 Use a Module
@@ -105,8 +107,10 @@ Example
 The module named mymodule has one function and one dictionary:
 '''
 
+
 def greeting(name):
   print("Hello, " + name)
+
 
 person1 = {
   "name": "John",
@@ -121,4 +125,4 @@ Import only the person1 dictionary from the module:
 
 from mymodule import person1
 
-print (person1["age"])
+print(person1["age"])

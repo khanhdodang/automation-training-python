@@ -178,7 +178,7 @@ thisdict = {
   "year": 1964
 }
 del thisdict
-print(thisdict) #this will cause an error because "thisdict" no longer exists.
+print(thisdict)  # this will cause an error because "thisdict" no longer exists.
 
 '''
 Example
@@ -235,17 +235,17 @@ Create a dictionary that contain three dictionaries:
 '''
 
 myfamily = {
-  "child1" : {
-    "name" : "Emil",
-    "year" : 2004
+  "child1": {
+    "name": "Emil",
+    "year": 2004
   },
-  "child2" : {
-    "name" : "Tobias",
-    "year" : 2007
+  "child2": {
+    "name": "Tobias",
+    "year": 2007
   },
-  "child3" : {
-    "name" : "Linus",
-    "year" : 2011
+  "child3": {
+    "name": "Linus",
+    "year": 2011
   }
 }
 
@@ -257,22 +257,22 @@ Create three dictionaries, then create one dictionary that will contain the othe
 '''
 
 child1 = {
-  "name" : "Emil",
-  "year" : 2004
+  "name": "Emil",
+  "year": 2004
 }
 child2 = {
-  "name" : "Tobias",
-  "year" : 2007
+  "name": "Tobias",
+  "year": 2007
 }
 child3 = {
-  "name" : "Linus",
-  "year" : 2011
+  "name": "Linus",
+  "year": 2011
 }
 
 myfamily = {
-  "child1" : child1,
-  "child2" : child2,
-  "child3" : child3
+  "child1": child1,
+  "child2": child2,
+  "child3": child3
 }
 
 '''

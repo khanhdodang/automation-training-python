@@ -157,7 +157,7 @@ Example
 The union() method returns a new set with all items from both sets:
 '''
 
-set1 = {"a", "b" , "c"}
+set1 = {"a", "b", "c"}
 set2 = {1, 2, 3}
 
 set3 = set1.union(set2)
@@ -168,7 +168,7 @@ Example
 The update() method inserts the items in set2 into set1:
 '''
 
-set1 = {"a", "b" , "c"}
+set1 = {"a", "b", "c"}
 set2 = {1, 2, 3}
 
 set1.update(set2)
@@ -186,7 +186,7 @@ Example
 Using the set() constructor to make a set:
 '''
 
-thisset = set(("apple", "banana", "cherry")) # note the double round-brackets
+thisset = set(("apple", "banana", "cherry"))  # note the double round-brackets
 print(thisset)
 
 '''

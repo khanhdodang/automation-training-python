@@ -9,4 +9,3 @@ element = driver.find_element_by_name("q")
 elements = driver.find_elements_by_name("q")
 
 driver.close()
-

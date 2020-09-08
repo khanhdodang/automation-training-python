@@ -3,6 +3,7 @@ from Locators.locators import LoginPageLocators
 from TestData.TestData import TestData
 import logging
 
+
 class LoginPage(BasePage):
 
   def __init__(self, driver):

@@ -16,7 +16,7 @@ Example
 Check PIP version:
 '''
 
-pip --version
+pip - -version
 
 '''
 Install PIP
@@ -33,7 +33,9 @@ Example
 Download a package named "camelcase":
 '''
 
-pip install camelcase
+pip
+install
+camelcase
 
 '''
 Now you have downloaded and installed your first package!
@@ -67,7 +69,9 @@ Example
 Uninstall the package named "camelcase":
 '''
 
-pip uninstall camelcase
+pip
+uninstall
+camelcase
 
 '''
 The PIP Package Manager will ask you to confirm that you want to remove the camelcase package:

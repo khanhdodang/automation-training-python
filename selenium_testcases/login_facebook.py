@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+
 user_name = "YOUR EMAILID"
 password = "YOUR PASSWORD"
 driver = webdriver.Chrome()

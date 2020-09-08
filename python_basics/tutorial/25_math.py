@@ -66,8 +66,8 @@ import math
 x = math.ceil(1.4)
 y = math.floor(1.4)
 
-print(x) # returns 2
-print(y) # returns 1
+print(x)  # returns 2
+print(y)  # returns 1
 
 '''
 The math.pi constant, returns the value of PI (3.14...):

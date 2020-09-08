@@ -241,7 +241,7 @@ Example
 Join two list:
 '''
 
-list1 = ["a", "b" , "c"]
+list1 = ["a", "b", "c"]
 list2 = [1, 2, 3]
 
 list3 = list1 + list2
@@ -254,7 +254,7 @@ Example
 Append list2 into list1:
 '''
 
-list1 = ["a", "b" , "c"]
+list1 = ["a", "b", "c"]
 list2 = [1, 2, 3]
 
 for x in list2:
@@ -269,7 +269,7 @@ Example
 Use the extend() method to add list2 at the end of list1:
 '''
 
-list1 = ["a", "b" , "c"]
+list1 = ["a", "b", "c"]
 list2 = [1, 2, 3]
 
 list1.extend(list2)
@@ -283,7 +283,7 @@ Example
 Using the list() constructor to make a List:
 '''
 
-thislist = list(("apple", "banana", "cherry")) # note the double round-brackets
+thislist = list(("apple", "banana", "cherry"))  # note the double round-brackets
 print(thislist)
 
 '''

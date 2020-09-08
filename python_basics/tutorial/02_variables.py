@@ -12,8 +12,8 @@ print(x)
 print(y)
 
 # Variables do not need to be declared with any particular type and can even change type after they have been set.
-x = 4 # x is of type int
-x = "Sally" # x is now of type str
+x = 4  # x is of type int
+x = "Sally"  # x is now of type str
 print(x)
 
 # String variables can be declared either by using single or double quotes:
@@ -29,7 +29,7 @@ A variable name cannot start with a number
 A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )
 Variable names are case-sensitive (age, Age and AGE are three different variables)
 '''
-#Legal variable names:
+# Legal variable names:
 myvar = "John"
 my_var = "John"
 _my_var = "John"
@@ -37,10 +37,12 @@ myVar = "John"
 MYVAR = "John"
 myvar2 = "John"
 
-#Illegal variable names:
-2myvar = "John"
-my-var = "John"
-my var = "John"
+# Illegal variable names:
+2
+myvar = "John"
+my - var = "John"
+my
+var = "John"
 
 '''
 Assign Value to Multiple Variables
@@ -51,7 +53,7 @@ print(x)
 print(y)
 print(z)
 
-#And you can assign the same value to multiple variables in one line:
+# And you can assign the same value to multiple variables in one line:
 x = y = z = "Orange"
 print(x)
 print(y)
@@ -66,18 +68,18 @@ To combine both text and a variable, Python uses the + character:
 x = "awesome"
 print("Python is " + x)
 
-#You can also use the + character to add a variable to another variable:
+# You can also use the + character to add a variable to another variable:
 x = "Python is "
 y = "awesome"
-z =  x + y
+z = x + y
 print(z)
 
-#For numbers, the + character works as a mathematical operator:
+# For numbers, the + character works as a mathematical operator:
 x = 5
 y = 10
 print(x + y)
 
-#If you try to combine a string and a number, Python will give you an error:
+# If you try to combine a string and a number, Python will give you an error:
 '''
 x = 5
 y = "John"
@@ -95,8 +97,10 @@ Create a variable outside of a function, and use it inside the function
 '''
 x = "awesome"
 
+
 def myfunc():
   print("Python is " + x)
+
 
 myfunc()
 
@@ -108,9 +112,11 @@ Create a variable inside a function, with the same name as the global variable
 '''
 x = "awesome"
 
+
 def myfunc():
   x = "fantastic"
   print("Python is " + x)
+
 
 myfunc()
 
@@ -125,9 +131,12 @@ To create a global variable inside a function, you can use the global keyword.
 Example
 If you use the global keyword, the variable belongs to the global scope:
 '''
+
+
 def myfunc():
   global x
   x = "fantastic"
+
 
 myfunc()
 
@@ -141,9 +150,11 @@ To change the value of a global variable inside a function, refer to the variabl
 '''
 x = "awesome"
 
+
 def myfunc():
   global x
   x = "fantastic"
+
 
 myfunc()
 

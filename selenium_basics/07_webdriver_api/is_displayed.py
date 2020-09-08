@@ -15,4 +15,3 @@ element = driver.find_element_by_link_text("Courses")
 print(element.is_displayed())
 
 driver.close()
-

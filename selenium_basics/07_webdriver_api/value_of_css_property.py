@@ -11,7 +11,6 @@ driver.get("https://www.geeksforgeeks.org/")
 # get element
 element = driver.find_element_by_id("gsc-i-id1")
 
-
 # print width
 print(element.value_of_css_property('width'))
 
