@@ -33,6 +33,9 @@ class LoginPage(BasePage):
     notifcationElement = self.driver.find_element(*LoginPage.loginMessage)
     return notifcationElement.is_displayed()
 
+  def get_message(self):
+    return self.driver.find_element(*LoginPage.loginMessage).text
+
   def login(self, username, password):
     self.set_username(username)
     self.set_password(password)
