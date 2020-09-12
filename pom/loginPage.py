@@ -1,7 +1,6 @@
 from selenium.webdriver.common.by import By
 import time
 
-
 # This is the base page which defines attributes and methods that all other pages will share
 class BasePage(object):
   def __init__(self, driver):
@@ -39,3 +38,8 @@ class LoginPage(BasePage):
     self.set_password(password)
     self.click_submit()
     time.sleep(5)  # sleep for 5 seconds so you can see the results
+
+  def login_object(self, account):
+    self.set_username(account.username)
+    self.set_password(account.password)
+    self.click_submit()

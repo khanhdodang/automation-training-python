@@ -1,7 +1,7 @@
 import unittest
 from selenium import webdriver
 from loginPage import LoginPage
-
+from account import Account
 
 class loginTests(unittest.TestCase):
 
@@ -25,6 +25,12 @@ class loginTests(unittest.TestCase):
   def test_login_blank_username(self):
     login_page = LoginPage(self.driver)
     login_page.login('', 'SuperSecretPassword!')
+    assert login_page.login_message_displayed()
+
+  def test_login_with_object(self):
+    account = Account('tomsmith', 'SuperSecretPassword!')
+    login_page = LoginPage(self.driver)
+    login_page.login_object(account)
     assert login_page.login_message_displayed()
 
   if __name__ == '__main__':
