@@ -7,6 +7,8 @@ class PythonOrgSearch(unittest.TestCase):
 
   def setUp(self):
     self.driver = webdriver.Chrome()
+    # chrome_driver_path = os.path.abspath('..')  + "\\drivers\\chromedriver.exe"
+    # driver=webdriver.Chrome(chrome_driver_path)
 
   def test_search_in_python_org(self):
     driver = self.driver
