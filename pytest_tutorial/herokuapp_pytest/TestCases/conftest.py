@@ -43,22 +43,26 @@ def driver_headless_init(request):
   yield
   driver.close()
 
-@pytest.fixture(scope="session")
-def browser(request):
-  "pytest fixture for browser"
-  return request.config.getoption("--browser")
+#Fixture for Firefox
+@pytest.fixture(scope="class")
+def firefox_driver_init(request):
+  ff_driver = webdriver.Firefox() 
+  request.cls.driver = ff_driver
+  yield
+  ff_driver.close()
+
+#Fixture for Chrome
+@pytest.fixture(scope="class")
+def chrome_driver_init(request):   
+  chrome_driver = webdriver.Chrome()   
+  request.cls.driver = chrome_driver
+  yield
+  chrome_driver.close()  
 
 def pytest_generate_tests(metafunc):
   "test generator function to run tests across different parameters"
   if "browser" in metafunc.fixturenames:
       metafunc.parameterize("browser", metafunc.config.option.browser)
-
-def pytest_addoption(parser):
-    parser.addoption("--browser",
-                      dest="browser",
-                      action="append",
-                      default=[],
-                      help="Browser. Valid options are chrome, firefox, safari, ie, edge, phantomjs and opera.")
 
 def pytest_runtest_makereport(item, call):
   if "incremental" in item.keywords:
