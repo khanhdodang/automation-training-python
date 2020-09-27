@@ -25,6 +25,7 @@
 
 *  Tests in Parallel:
     ```$ pytest -s -n 2 --html=pytest_selenium_test_report.html```
+    ```$ pytest -s -n 2 --junitxml=pytest_selenium_test_report.xml```
 
 ### Advice/Troubleshooting
 
