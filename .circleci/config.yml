@@ -13,8 +13,6 @@ jobs:
       - python/save-cache
       - run:
           command: cd selenium_advanced/herokuapp/
-          name: Navigate to sub-project
-      - run:
           command: python TestSuites/testsuite_html_report.py
           name: Test
 
