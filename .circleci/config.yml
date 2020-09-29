@@ -1,6 +1,8 @@
-ersion: 2.1
+version: 2.1
+
 orbs:
   python: circleci/python@0.2.1
+
 jobs:
   build-and-test:
     executor: python/default
@@ -15,6 +17,7 @@ jobs:
       - run:
           command: python TestSuites/testsuite_html_report.py
           name: Test
+
 workflows:
   main:
     jobs:
