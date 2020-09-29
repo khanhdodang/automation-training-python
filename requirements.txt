@@ -1,0 +1,5 @@
+require-python-3
+selenium
+pytest
+pytest-xdist
+requests
