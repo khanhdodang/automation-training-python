@@ -12,7 +12,9 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          command: python selenium_advanced/herokuapp/TestSuites/testsuite_html_report.py 
+          command: |
+          cd selenium_advanced/herokuapp/
+          python TestSuites/testsuite_html_report.py 
           name: Test
 
 workflows:
