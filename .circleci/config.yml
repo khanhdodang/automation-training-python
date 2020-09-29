@@ -11,8 +11,7 @@ jobs:
       - python/load-cache
       - python/install-deps
       - python/save-cache
-      - run: cd selenium_advanced/herokuapp/
-      - run: python TestSuites/testsuite_html_report.py
+      - run: cd selenium_advanced/herokuapp/ && python TestSuites/testsuite_html_report.py
 workflows:
   main:
     jobs:
