@@ -14,11 +14,9 @@ jobs:
       - run:
           command: cd selenium_advanced/herokuapp/
           name: Navigate to sub-project
-    steps:
-     - run tests
      - run:
-        command: python TestSuites/testsuite_html_report.py
-        name: Test
+          command: python TestSuites/testsuite_html_report.py
+          name: Test
 
 workflows:
   main:
