@@ -1,3 +1,5 @@
+wheel
+chromedriver
 selenium
 pytest
 pytest-xdist
