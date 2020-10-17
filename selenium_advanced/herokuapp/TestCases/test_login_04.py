@@ -7,7 +7,7 @@ from Pages.login_page import LoginPage
 from Pages.result_page import ResultPage
 from TestCases.base_test import BaseTest
 from TestData.TestData import TestData
-from Objects.Account import Account
+from Objects.account import Account
 
 
 class HerokuAppLogin4(BaseTest):
