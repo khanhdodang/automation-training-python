@@ -26,7 +26,7 @@ class BaseTest(unittest.TestCase):
     except Exception as e:
       pass
 
-  def startBrowser(name="chrome"):
+  def startBrowser(self, name="chrome"):
     """
     browsers，"firefox"、"chrome"、"ie"、"phantomjs"
     """
@@ -49,7 +49,7 @@ class BaseTest(unittest.TestCase):
     except Exception as msg:
       print("message: %s" % str(msg))
 
-  def get_browser():
+  def get_browser(self):
     try:
       return os.environ['BROWSER']
     except KeyError:

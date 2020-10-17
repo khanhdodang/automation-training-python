@@ -17,7 +17,8 @@ login2 = unittest.TestLoader().loadTestsFromTestCase(HerokuAppLogin2)
 login3 = unittest.TestLoader().loadTestsFromTestCase(HerokuAppLogin3)
 
 # create a test suite
-test_suite = unittest.TestSuite([login1, login2, login3])
+# test_suite = unittest.TestSuite([login1, login2, login3])
+test_suite = unittest.TestSuite([login1])
 
 # open the report file
 outfile = open(dir + "/SeleniumPythonTestSummary.html", 'wb')
