@@ -12,7 +12,7 @@ class MouseHovering(unittest.TestCase):
 
   def test_hover(self):
     driver = self.driver
-    baseUrl = "https://letskodeit.teachable.com/pages/practice"
+    baseUrl = "https://courses.letskodeit.com/practice"
     driver.maximize_window()
     driver.get(baseUrl)
     driver.implicitly_wait(3)
